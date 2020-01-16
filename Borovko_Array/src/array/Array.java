@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /*****************************************************************
- * Составить алгоритм: на входе есть числовой массив, необходимо *
- * вывести элементы массива кратны 3							 *
+ * РЎРѕСЃС‚Р°РІРёС‚СЊ Р°Р»РіРѕСЂРёС‚Рј: РЅР° РІС…РѕРґРµ РµСЃС‚СЊ С‡РёСЃР»РѕРІРѕР№ РјР°СЃСЃРёРІ, РЅРµРѕР±С…РѕРґРёРјРѕ *
+ * РІС‹РІРµСЃС‚Рё СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР° РєСЂР°С‚РЅС‹ 3				 *			 *
  *****************************************************************/
 
 public class Array {
@@ -18,13 +18,13 @@ public class Array {
 
 	public static void inputValues() {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Укажите количество чисел");
+		System.out.println("РЈРєР°Р¶РёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР»");
 		String str = scan.nextLine();
 		checkNumberOfArrayElementsIsTrue(str);
 		if (numberOfArrayElementsIsOk == true && numberOfArrayElements <= 0) {
-			System.out.println("Перезапустите программу и введите натуральное число");
+			System.out.println("РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ Рё РІРІРµРґРёС‚Рµ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
 		} else if (numberOfArrayElementsIsOk == true) {
-			System.out.println("Введите набор чисел, после каждого нажмите Enter");
+			System.out.println("Р’РІРµРґРёС‚Рµ РЅР°Р±РѕСЂ С‡РёСЃРµР», РїРѕСЃР»Рµ РєР°Р¶РґРѕРіРѕ РЅР°Р¶РјРёС‚Рµ Enter");
 			for (int i = 0; i < numberOfArrayElements; i++) {
 				str = scan.nextLine();
 				checkEachElementForIntegerValue(str);
@@ -46,7 +46,7 @@ public class Array {
 			numberOfArrayElementsIsOk = true;
 		} catch (NumberFormatException e) {
 			System.out.print(
-					"Значение " + numberOfArray + " не является натуральным " + "числом, перезапустите программу");
+					"Р—РЅР°С‡РµРЅРёРµ " + numberOfArray + " РЅРµ СЏРІР»СЏРµС‚СЃСЏ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рј " + "С‡РёСЃР»РѕРј, РїРµСЂРµР·Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ");
 		}
 
 	}
@@ -56,14 +56,14 @@ public class Array {
 			elementNumber = Integer.parseInt(element);
 			isElementNumberOk = true;
 		} catch (NumberFormatException e) {
-			System.out.print("Значение" + element + " не является целым " + "числом, перезапустите программу");
+			System.out.print("Р—РЅР°С‡РµРЅРёРµ" + element + " РЅРµ СЏРІР»СЏРµС‚СЃСЏ С†РµР»С‹Рј " + "С‡РёСЃР»РѕРј, РїРµСЂРµР·Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ");
 		}
 	}
 
 	public static void isMultipleCheck() {
 		for (int i = 0; i < arrayList.size(); i++) {
 			if (arrayList.get(i) % 3 == 0 && arrayList.get(i) > 0) {
-				System.out.print(arrayList.get(i) + " - кратно 3 ");
+				System.out.print(arrayList.get(i) + " - РєСЂР°С‚РЅРѕ 3 ");
 			}
 		}
 
